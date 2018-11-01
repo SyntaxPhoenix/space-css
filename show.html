@@ -1,0 +1,346 @@
+<html>
+    <head>
+        <title>Space-CSS Show Design</title>
+        <link href="web/css/space-css.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <style>
+            body {
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark navbar-one navbar-fixed-top" id="example-navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-target="#example-navbar" data-toggle="toggle"><span class="icon-menu"></span></button>
+                <a class="navbar-brand" href="/home">Space-CSS</a>
+            </div>
+            <div class="navbar-menu-left">
+                <ul>
+                    <li><a href="#" class="active">Test-3</a></li>
+                    <li><a href="#panels">Panels</a></li>
+                    <li><a href="#buttons">Buttons</a></li>
+                </ul>
+            </div>
+            <div class="navbar-menu-right">
+                <ul>
+                    <li class="disabled"><a href="#">Test-1</a></li>
+                    <li class="active"><a href="#">Test-2</a></li>
+                    <li><a href="#" class="active">Test-3</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div style="padding-top: 55px;"></div>
+        <div class="row">
+            <div class="col-md-17 col-sm-15">
+                <div class="panel panel-light">
+                    <div class="panel-body">
+                        <h1 class="text-center">Space-CSS</h1>
+                        <div id="panels" class="scrollspy">
+                            <h2 class="text-center">Panels</h2>
+                            Panels are an mainfeature of Space-CSS. Panels are the keyword for design.
+                            With panels you're able to seperate content and make content special.<br>
+                            <br>
+                            <br>
+                            <h3>Basic Panel</h3>
+                            The basic Panel just have body. All aditional Feature can be added by seperated classes.<br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-16 col-md-offset-4 col-sm-20 col-sm-offset-2">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            This is a basic Panel
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <h3>Panel with Footer</h3>
+                            It is also possible to add a footer to your panel, which will be highlighted through the panel-color<br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-16 col-md-offset-4 col-sm-20 col-sm-offset-2">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            This is the Panel-Body
+                                        </div>
+                                        <div class="panel-footer">
+                                            This is the Panel-Footer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <h3>Panel with big Footer</h3>
+                            It is also possible to make your footer bigger...<br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-16 col-md-offset-4 col-sm-20 col-sm-offset-2">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            This is the Panel-Body
+                                        </div>
+                                        <div class="panel-footer panel-footer-lg">
+                                            This is the large Panel-Footer
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <h3>Different Styles</h3>
+                            Panels are available in 3 Styles: dark, default, light. By default panels have the default-Style.
+                            All Styles can be combined with Colors! All Panel-Styles apply to the panel-body!<br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel">
+                                        <div class="panel-body">
+                                            This is a panel with default-Style
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-dark">
+                                        <div class="panel-body">
+                                            This is a panel with dark-Style
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-md-offset-6">
+                                    <div class="panel panel-light">
+                                        <div class="panel-body">
+                                            This is a panel with light-Style
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <h3>Different colors</h3>
+                            Panels are available in the five brand-colors, which you had selected by downloading
+                            Space-CSS. All Color-Schemes apply to the panel-head and the footer!<br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-one">
+                                        <div class="panel-body">
+                                            This is a panel for color-one
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-two">
+                                        <div class="panel-body">
+                                            This is a panel for color-two
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-three">
+                                        <div class="panel-body">
+                                            This is a panel for color-three
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-four">
+                                        <div class="panel-body">
+                                            This is a panel for color-four
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-md-offset-6">
+                                    <div class="panel panel-five">
+                                        <div class="panel-body">
+                                            This is a panel for color-five
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <h3>Minimal-Panels</h3>
+                            You do not want your footer in the color of your panel-head? 
+                            Use panel-minimal to seperate footer from head!<br>
+                            <br>  
+                            <div class="row">
+                                <div class="col-md-12 col-md-offset-6">
+                                    <div class="panel panel-minimal panel-one">
+                                        <div class="panel-body">
+                                            This is a minimal panel. Maybe for Logins?
+                                        </div>
+                                        <div class="panel-footer">
+                                            This is the footer with a different color than the head!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                 
+                        <div id="buttons" class="scrollspy">
+                            <h2 class="text-center">Buttons</h2>
+                            Buttons are a main-element in websites. To make them fit to your design you
+                            can use the color-based Buttons of our Framework.<br>
+                            <br>
+                            <br>
+                            <h3>Button-Types</h3>
+                            These are all basic-buttons, that are included in Space-CSS:<br>
+                            <br>
+                            <button class="btn">Button Default</button>
+                            <button class="btn btn-one">Button One</button>
+                            <button class="btn btn-two">Button Two</button>
+                            <button class="btn btn-three">Button Three</button>
+                            <button class="btn btn-four">Button Four</button>
+                            <button class="btn btn-five">Button Five</button>
+                            <br>
+                            <br>
+                            <h3>Button-Sizes</h3>
+                            With Space-CSS it is possible to size Buttons to your needs:<br>
+                            <br>
+                            <button class="btn btn-xs">Extra Small</button><br>
+                            <br>
+                            <button class="btn btn-sm">Button Small</button><br>
+                            <br>
+                            <button class="btn">Button Default</button><br>
+                            <br>
+                            <div class="dropdown-container">
+                                <a data-option="dropdown" data-target="#dropdown1">
+                                    <button class="btn btn-lg">Dropdown</button>
+                                </a>
+                                <ul class="dropdown" id="dropdown1">
+                                    <li><a href="#panels">Panels</a></li>
+                                    <li><a href="#buttons">Buttons</a></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <br>
+                            <h3>Button-Block</h3>
+                            Sometimes you may need Block-Buttons as example for a big Login-Button.
+                            Block Buttons have a size of 100% width.<br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12 col-md-offset-6">
+                                    <div class="panel panel-minimal panel-one">
+                                        <div class="panel-body">
+                                            <h1 class="text-center">Login</h1>
+                                            <form action="#" method="post" style="margin-bottom: 8px;">
+                                                <input class="form-control" type="text" id="username" placeholder="Username">
+                                                <input class="form-control" type="password" id="password" placeholder="Password">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="form-group">
+                                                            <input type="checkbox" name="remember_me" id="rememberMe">
+                                                            <label for="rememberMe">Remember me</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12" style="margin-top: 8px;">
+                                                        <b>Forgot Password?</b>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-one btn-lg btn-block">Login</button>
+                                            </form>
+                                        </div>
+                                        <div class="panel-footer panel-footer-lg text-center">
+                                            <span class="text-disabled">Don't have an account? <a><b>Sign Up</b></a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>                 
+                        <div id="labels" class="scrollspy">
+                            <h2 class="text-center">Labels</h2>
+                            Labels are tags, which can be added to tables to identify status etc.<br>
+                            <br>
+                            <br>
+                            <h3>Label-Types</h3>
+                            These are all basic-labels, that are included in Space-CSS:<br>
+                            <br>
+                            <span class="label label-error">label-error</span>
+                            <span class="label label-success">label-success</span>
+                            <span class="label label-one">label-one</span>
+                            <span class="label label-two">label-two</span>
+                            <span class="label label-three">label-three</span>
+                            <span class="label label-four">label-four</span>
+                            <span class="label label-five">label-five</span>
+                            <br>
+                            <br>
+                            <span class="label label-lg label-five">label-five</span>
+                            <br>
+                            <br>
+                        </div>                 
+                        <div id="navbar" class="scrollspy">
+                            <h2 class="text-center">Navbars</h2>
+                            Labels are tags, which can be added to tables to identify status etc.<br>
+                            <br>
+                            <br>
+                            <h3>Basic Navbar</h3>
+                            These are all basic-labels, that are included in Space-CSS:<br>
+                            <br>
+                            <nav class="navbar" id="basic-example-navbar">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-target="#basic-example-navbar" data-toggle="toggle"><span class="icon-menu"></span></button>
+                                    <a class="navbar-brand" href="#">Basic Navbar</a>
+                                </div>
+                                <div class="navbar-menu-left">
+                                    <ul>
+                                        <li><a href="#" class="active">Active Example</a></li>
+                                        <li><a href="#">Normal Example</a></li>
+                                    </ul>
+                                </div>
+                                <div class="navbar-menu-right">
+                                    <ul>
+                                        <li class="disabled"><a href="#">Disabled - Right</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <br>
+                            <br>
+                            <span class="label label-lg label-five">label-five</span>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-9">
+                <div class="panel">
+                    <div class="panel-body">
+                        <h1 class="text-center">Overview</h1>
+                        <a href="#panels">Panels</a><br>
+                        <a href="#buttons">Buttons</a><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-three navbar-fixed-bottom navbar-light navbar-footer" id="example-navbar-bottom">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-target="#example-navbar-bottom" data-toggle="toggle"><span class="icon-menu"></span></button>
+            </div>
+            <div class="navbar-menu-left">
+                <ul>
+                    <li><span class="navbar-text">Dies ist ein Test-Text</span></li>
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li class="disabled"><a href="#">Test-3</a></li>
+                </ul>
+            </div>
+            <div class="navbar-menu-right">
+                <ul>
+                    <li><a href="#">Test-1</a></li>
+                    <li class="active"><a href="#">Test-2</a></li>
+                    <li><a href="#">Test-3</a></li>
+                </ul>
+            </div>
+        </nav>
+        <script src="web/js/space-css.js"></script>
+    </body>
+</html>

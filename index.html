@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Design - Test</title>
+        <style>
+            :root {
+                --dark-color: #222222; 
+                --lightdark-color: #333333;
+                --lighteneddark-color: #555555;
+                --white-color: #f1f1f1;
+                --darkwhite-color: #e1e1e1;
+                --darkenedwhite-color: #c1c1c1;
+
+                --red-color: #ea2f10;
+                --green-color: #3c9a5f;
+
+                --brand1-color: #062f3c;
+                --brand2-color: #56c1ab;
+                --brand3-color: #008cba;
+                --brand4-color: #062f3c;
+            }
+            
+            body {
+                margin: 0;
+                background-color: var(--dark-color);
+            }
+            
+            .background {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                width: 50%;
+                height: 100%;
+                z-index: 1;
+                background-color: var(--white-color);
+            }
+
+            .content {
+                position: relative;
+                z-index: 2;
+                padding: 30px;
+                text-align: center;
+                font-weight: bold;
+                font-family: Arial, sans-serif;
+                padding: 5% 20%;
+            }
+
+            .bar {
+                height: 7px;
+                border-radius: 3px;
+                width: 100%;
+            }
+
+            .dot {
+                width: 36px;
+                height: 36px;
+                border-radius: 18px;
+                display: inline-block;
+            }
+
+            .padder {
+                padding-top: 25px;
+            }
+
+            .b-color-error {
+                background-color: var(--red-color);
+            }
+
+            .b-color-success {
+                background-color: var(--green-color);
+            }
+
+            .b-color-brand1 {
+                background-color: var(--brand1-color);
+            }
+
+            .b-color-brand2 {
+                background-color: var(--brand2-color);
+            }
+
+            .b-color-brand3 {
+                background-color: var(--brand3-color);
+            }
+
+            .b-color-brand4 {
+                background-color: var(--brand4-color);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="bar b-color-error"></div>
+            <div class="padder"></div>
+            <div class="bar b-color-success"></div>
+            <div class="padder"></div>
+            <div class="dot b-color-brand1"></div>
+            <div class="padder"></div>
+            <div class="dot b-color-brand2"></div>
+            <div class="padder"></div>
+            <div class="dot b-color-brand3"></div>
+            <div class="padder"></div>
+            <div class="dot b-color-brand4"></div>
+        </div>
+        <div class="background"></div>
+    </body>
+</html>
