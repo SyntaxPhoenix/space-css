@@ -1112,6 +1112,30 @@ fieldset[disabled] .btn {
     background-color: #79002d;
     border-color: #750029;
 }
+.btn-error {
+    background-color: #e12310;
+    border-color: #d11300;
+    color: #f8d7d4;
+}
+.btn-error:focus,
+.btn-error.focus,
+.btn-error:hover {
+    background-color: #c10300;
+    border-color: #b10300;
+    color: #f8d7d4;
+}
+.btn-success {
+    background-color: #3a985c;
+    border-color: #2a884c;
+    color: #ccf5db;
+}
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:hover {
+    background-color: #1a783c;
+    border-color: #0a682c;
+    color: #ccf5db;
+}
 .btn-lg {
     padding: 14px 25px;
     font-size: 22px;
