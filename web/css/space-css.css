@@ -1191,7 +1191,26 @@ fieldset[disabled] .btn {
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.17) !important;
 }
 /* Inputs */
-
+.form-horizontal {
+    margin-left: -12px;
+    margin-right: -12px;
+}  
+.form-horizontal:before,
+.form-horizontal:after {
+  content: " ";
+  display: table;
+}
+.form-horizontal:after {
+  clear: both;
+}
+.form-horizontal .form-control {
+    margin: 8px 0px;
+}
+.form-horizontal .btn {
+    margin: 8px 0px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
 input[type="text"].form-control,
 input[type="password"].form-control,
 input[type="number"].form-control,
@@ -1748,4 +1767,14 @@ table.table {
     to {
         opacity: 1
     }
+}
+.center-container {
+	margin-top: -75px;
+	display: flex;
+    align-items: center;
+	width: 100vw;
+	min-height: 100vh;
+}
+.centered-box {
+    width: 100%;
 }
