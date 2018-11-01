@@ -1,7 +1,12 @@
 var toggledNav = '';
 var toggledDropdown = '';
 
-window.onload = scrollSpy();
+window.onload = runInit();
+
+function runInit() {
+    setTimeout(runSlideshows, 8000);
+    scrollSpy();
+}
 
 document.addEventListener('click', function (event) {
     if(event.target.tagName.toLowerCase() == 'a') {
@@ -47,7 +52,8 @@ document.addEventListener('click', function (event) {
     }
 }, false);
 
-function toggleNav(element) {
+function toggleNav(element) 
+{
     navbar = element.dataset.target.replace('#', '');
     document.getElementById(navbar).classList.add('navbar-toggled');
     element.innerHTML = '<span class="icon-remove"></span>'
@@ -55,7 +61,8 @@ function toggleNav(element) {
     toggledNav = element;
 }
 
-function untoggleNav(element) {
+function untoggleNav(element) 
+{
     navbar = element.dataset.target.replace('#', '');
     document.getElementById(navbar).classList.remove('navbar-toggled');
     element.innerHTML = '<span class="icon-menu"></span>'
@@ -63,22 +70,26 @@ function untoggleNav(element) {
     toggledNav = '';
 }
 
-function toggleDropdown(element) {
-    target.classList.add('dropdown-toggled');
+function toggleDropdown(element) 
+{
+    element.classList.add('dropdown-toggled');
     toggledDropdown = element;
 }
 
-function untoggleDropdown(element) {
-    target.classList.remove('dropdown-toggled');
+function untoggleDropdown(element) 
+{
+    element.classList.remove('dropdown-toggled');
     toggledDropdown = '';
 }
 
-function removeFromArray(array, element) {
+function removeFromArray(array, element) 
+{
     const index = array.indexOf(element);
     array.splice(index, 1);
 }
 
-function scrollSpy() {
+function scrollSpy() 
+{
     var section = document.querySelectorAll(".scrollspy");
     var sections = {};
     var link = 0;
@@ -96,10 +107,131 @@ function scrollSpy() {
                 if(lastElement != null) {
                     lastElement.classList.remove('active');
                 }
-                element = document.querySelector('a[href*=' + link + ']')
-                element.classList.add('active');
-                lastElement = element;
+                element = document.querySelector('a[href*=' + link + ']');
+                if(element != null) {
+                    element.classList.add('active');
+                    lastElement = element;
+                }
             }
         }
     };
 };
+
+function runSlideshows() 
+{
+    var slides = document.getElementsByClassName("slideshow");
+    for(i = 0; i < slides.length; i++) {
+        var slideshow = slides[i];
+        var oldSlide = slideshow.dataset.target;
+        var newSlide = +oldSlide + 1;
+        deselectSlideshow(slideshow, oldSlide);
+        selectSlideshow(slideshow, newSlide);
+    }
+    setTimeout(runSlideshows, 8000);
+}
+
+function deselectSlideshow(slideshow, slideId)
+{
+    var slides = slideshow.children;
+    for(i = 0; i < slides.length; i++) {
+        var slide = slides[i];
+        if(slide.classList.contains('slide') && slide.dataset.id == slideId) {
+            slide.classList.remove('active');
+            deselectSlideControl(slideshow, slideId);
+            break;
+        }
+    }
+}
+
+function selectSlideshow(slideshow, slideId, run = 1)
+{
+    if(run > 2) {
+        console.log('Does not found ' + slideId);
+        return;
+    }
+    var slides = slideshow.children;
+    var selected = false;
+    for(i = 0; i < slides.length; i++) {
+        var slide = slides[i];
+        if(slide.classList.contains('slide') && slide.dataset.id == slideId) {
+            slideshow.dataset.target = slideId;
+            slide.classList.add('active');
+            selectSlideControl(slideshow, slideId);
+            selected = true;
+            break;
+        }
+    }
+    if(!selected) {
+        selectSlideshow(slideshow, 1, run+1);
+    }
+}
+function maxSlide(slideshow)
+{
+    var slides = slideshow.children;
+    var maxSlide = 1;;
+    for(i = 0; i < slides.length; i++) {
+        var slide = slides[i];
+        if(slide.classList.contains('slide')) {
+            if(slide.dataset.id > maxSlide) {
+                maxSlide = slide.dataset.id;
+            }
+        }
+    }
+    return maxSlide;
+}
+
+function selectSlideControl(slideshow, slideId) {
+    var childs = slideshow.children;
+    for(i = 0; i < childs.length; i++) {
+        var child = childs[i];
+        if(child.classList.contains('slide-control')) {
+            var slideSelects = child.children;
+            for(x = 0; x < slideSelects.length; x++) {
+                var slideSelect = slideSelects[x];
+                if(slideSelect.dataset.id == slideId) {
+                    slideSelect.classList.add('active');
+                    break;
+                }
+            }
+        }
+    }
+}
+
+function deselectSlideControl(slideshow, slideId) {
+    var childs = slideshow.children;
+    for(i = 0; i < childs.length; i++) {
+        var child = childs[i];
+        if(child.classList.contains('slide-control')) {
+            var slideSelects = child.children;
+            for(x = 0; x < slideSelects.length; x++) {
+                var slideSelect = slideSelects[x];
+                if(slideSelect.dataset.id == slideId) {
+                    slideSelect.classList.remove('active');
+                    break;
+                }
+            }
+        }
+    }
+}
+
+document.addEventListener('click', function (event) {
+    if(event.target.classList.contains('slide-select')) {
+        var slideshow = event.target.parentElement.parentElement;
+        deselectSlideshow(slideshow, slideshow.dataset.target);
+        selectSlideshow(slideshow, event.target.dataset.id);
+    }
+    if(event.target.classList.contains('slide-next')) {
+        var slideshow = event.target.parentElement;
+        deselectSlideshow(slideshow, slideshow.dataset.target);
+        selectSlideshow(slideshow, (+slideshow.dataset.target+1));
+    }
+    if(event.target.classList.contains('slide-prev')) {
+        var slideshow = event.target.parentElement;
+        deselectSlideshow(slideshow, slideshow.dataset.target);
+        if(slideshow.dataset.target == 1) {
+            selectSlideshow(slideshow, maxSlide(slideshow));
+        } else {
+            selectSlideshow(slideshow, (+slideshow.dataset.target-1));
+        }
+    }
+});
