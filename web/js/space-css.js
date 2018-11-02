@@ -26,6 +26,25 @@ document.addEventListener('click', function (event) {
         }
     }
 
+    /* Untoggle Modal when active and User clicks beside it */
+    if(event.target.classList.contains('modal')) {
+        if(event.target.classList.contains('modal-show')) {
+            untoggleModal(event.target);
+        }
+    }
+    /* Toggle Modal via data-option */
+    if(event.target.dataset.option == 'modal') {
+        console.log('Modal');
+        if(event.target.dataset.trigger == 'open') {
+            console.log('Open');
+            toggleModal(document.getElementById(event.target.dataset.id.replace('#','')));
+        } else {
+            untoggleModal(document.getElementById(event.target.dataset.id.replace('#','')));
+        }
+    }
+
+
+
     if((event.target.dataset.option != null && event.target.dataset.option == 'dropdown') || 
        (event.target.parentElement.dataset.option != null && 
         event.target.parentElement.dataset.option == 'dropdown')) {
@@ -56,6 +75,16 @@ document.addEventListener('click', function (event) {
         untoggleNav(toggleNavbar);
     }
 }, false);
+
+function toggleModal(element) 
+{
+    element.classList.add('modal-show');
+}
+
+function untoggleModal(element) 
+{
+    element.classList.remove('modal-show');
+}
 
 function toggleNav(element) 
 {

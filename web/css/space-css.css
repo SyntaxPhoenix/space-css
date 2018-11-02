@@ -1730,7 +1730,6 @@ table.table {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-    cursor: pointer;
 .slide-prev, 
 .slide-next {
     position: absolute;
@@ -1812,4 +1811,24 @@ table.table {
 }
 .centered-box {
     width: 100%;
+}
+.modal {
+    z-index: 999999;
+    align-items: center;
+	width: 100vw;
+    min-height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.356);
+    top: 0px;
+    right: 0;
+    left: 0;
+    position: fixed;
+}
+.modal-show {
+    display: flex;
+}
+.modal-content {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
 }
