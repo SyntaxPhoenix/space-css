@@ -1574,6 +1574,9 @@ table.table {
     text-decoration: none;
     color: #333333;
 }
+.navbar .dropdown-container {
+    cursor: pointer;
+}
 .navbar-brand:hover,
 .navbar-brand:active {
     background-color: #e1e1e1;
@@ -1727,9 +1730,9 @@ table.table {
     animation-name: fade;
     animation-duration: 1.5s;
 }
+    cursor: pointer;
 .slide-prev, 
 .slide-next {
-    cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
