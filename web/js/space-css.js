@@ -20,20 +20,25 @@ document.addEventListener('click', function (event) {
             }
             return;
         }
+    } else {
+        if(toggledDropdown !== '') {
+            untoggleDropdown(toggledDropdown);
+        }
     }
 
     if((event.target.dataset.option != null && event.target.dataset.option == 'dropdown') || 
        (event.target.parentElement.dataset.option != null && 
         event.target.parentElement.dataset.option == 'dropdown')) {
         dropdown = event.target;    
-        if(event.target.dataset.option == null || event.target.dataset.option != 'dopdown') {
+        if(event.target.dataset.option == null || event.target.dataset.option != 'dropdown') {
             dropdown = event.target.parentElement;
         }
+        dropdown.classList.add('active');
         target = document.getElementById(dropdown.dataset.target.replace('#',''));
         if(target.classList.contains('dropdown-toggled')) {
-            untoggleDropdown(target);
+            untoggleDropdown(dropdown);
         } else {
-            toggleDropdown(target);
+            toggleDropdown(dropdown);
         }
         return;
     }
@@ -70,15 +75,19 @@ function untoggleNav(element)
     toggledNav = '';
 }
 
-function toggleDropdown(element) 
+function toggleDropdown(dropdown) 
 {
-    element.classList.add('dropdown-toggled');
-    toggledDropdown = element;
+    target = document.getElementById(dropdown.dataset.target.replace('#',''));
+    dropdown.classList.add('active');
+    target.classList.add('dropdown-toggled');
+    toggledDropdown = dropdown;
 }
 
-function untoggleDropdown(element) 
+function untoggleDropdown(dropdown) 
 {
-    element.classList.remove('dropdown-toggled');
+    target = document.getElementById(dropdown.dataset.target.replace('#',''));
+    dropdown.classList.remove('active');
+    target.classList.remove('dropdown-toggled');
     toggledDropdown = '';
 }
 

@@ -1407,6 +1407,20 @@ table.table {
 .navbar-dark .navbar-brand:active {
     background-color: #222222 !important;
 }
+.navbar-dark .dropdown {
+    background-color: #333333;
+    border-bottom: 7px solid #333333;
+    border-top: 4px solid #333333;
+}
+.navbar-dark .dropdown > li > a {
+    color: #f1f1f1;
+}
+.navbar-dark .dropdown > li > a:hover,
+.navbar-dark .dropdown > li > a:active,
+.navbar-dark .dropdown > li.active > a,
+.navbar-dark .dropdown > li > a.active {
+    background-color: #222222;
+}
 .navbar-light {
     background-color: #f8f8fd !important;
     color: #333333 !important;
@@ -1446,6 +1460,17 @@ table.table {
 .navbar-light .navbar-brand:hover,
 .navbar-light .navbar-brand:active {
     background-color: #e1e1ed !important;
+}
+.navbar-light .dropdown {
+    background-color: #f8f8fd;
+    border-bottom: 7px solid #f8f8fd;
+    border-top: 4px solid #f8f8fd;
+}
+.navbar-light .dropdown > li > a:hover,
+.navbar-light .dropdown > li > a:active,
+.navbar-light .dropdown > li.active > a,
+.navbar-light .dropdown > li > a.active {
+    background-color: #e1e1ed;
 }
 .navbar-fixed-top {
     top: 0px;
@@ -1497,13 +1522,11 @@ table.table {
 .navbar-menu-left > ul > li,
 .navbar-menu-right > ul > li {
     float: left;
-    height: 45px;
     list-style-type: none;
     font-size: 18px;
 }
 .navbar-menu-left > ul > li > a,
 .navbar-menu-right > ul > li > a {
-    height: 100%;
     width: 100%;
     display: inline-block;
     padding: 10px 15px;
@@ -1590,6 +1613,17 @@ table.table {
         display: inline-block;
         float: none !important;
     }
+    .navbar .dropdown-container {
+        position: static !important;
+        float: none;
+    }
+    .navbar .dropdown {
+        position: static !important;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+        width: 100%;
+        box-shadow: none !important;
+    }
 }
 .dropdown-container {
     display: inline-block;
@@ -1601,7 +1635,7 @@ table.table {
     position: absolute;
     margin: 0px;
     padding: 0px;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.17) !important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.17);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-bottom: 7px solid #f1f1f1;
@@ -1612,16 +1646,14 @@ table.table {
 }
 .dropdown > li {
     width: 100%;
-    height: 42px;
     list-style-type: none;
-    font-size: 18px;
 }
 .dropdown > li > a,
 .dropdown > li > a {
-    height: 100%;
     width: 100%;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 12px 30px;
+    font-size: 18px;
     text-decoration: none;
     color: #333333;
 }

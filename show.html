@@ -19,7 +19,13 @@
             <div class="navbar-menu-left">
                 <ul>
                     <li><a href="#" class="active">Test-3</a></li>
-                    <li><a href="#panels">Panels</a></li>
+                    <li class="dropdown-container">
+                        <a data-option="dropdown" data-target="#panels_dropdown">Panels</a>
+                        <ul class="dropdown" id="panels_dropdown">
+                            <li><a href="#panels">Panels</a></li>
+                            <li><a href="#buttons">Buttons</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#buttons">Buttons</a></li>
                 </ul>
             </div>
