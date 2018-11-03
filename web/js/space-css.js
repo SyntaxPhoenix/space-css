@@ -122,7 +122,7 @@ function untoggleDropdown(dropdown)
 
 function removeFromArray(array, element) 
 {
-    const index = array.indexOf(element);
+    index = array.indexOf(element);
     array.splice(index, 1);
 }
 
@@ -181,8 +181,9 @@ function deselectSlideshow(slideshow, slideId)
     }
 }
 
-function selectSlideshow(slideshow, slideId, run = 1)
+function selectSlideshow(slideshow, slideId, run)
 {
+    run = run || 1;
     if(run > 2) {
         console.log('Does not found ' + slideId);
         return;
