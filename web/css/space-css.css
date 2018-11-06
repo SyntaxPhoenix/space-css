@@ -1321,6 +1321,7 @@ table.table {
     z-index: 7000;   
     background-color: #f1f1f1;
     color: #333333;
+    z-index: 70000;
 }
 .navbar-one {
     border-top: 7px solid #062f3c;
