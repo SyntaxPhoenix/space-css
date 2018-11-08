@@ -1803,12 +1803,17 @@ table.table {
         opacity: 1
     }
 }
-.center-container {
-	margin-top: -75px;
+.center-container-site {
 	display: flex;
     align-items: center;
 	width: 100vw;
 	min-height: 100vh;
+}
+.center-container {
+	display: flex;
+    align-items: center;
+	width: 100%;
+	min-height: 100%;
 }
 .centered-box {
     width: 100%;
