@@ -1803,6 +1803,11 @@ table.table {
         opacity: 1
     }
 }
+.center-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .center-container-site {
 	display: flex;
     align-items: center;
