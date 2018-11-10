@@ -1211,6 +1211,9 @@ fieldset[disabled] .btn {
     padding: 10px 20px;
     font-size: 16px;
 }
+.form-hidden {
+    display: none;
+}
 input[type="text"].form-control,
 input[type="password"].form-control,
 input[type="number"].form-control,
