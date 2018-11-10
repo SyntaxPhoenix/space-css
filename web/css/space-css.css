@@ -1803,7 +1803,6 @@ table.table {
     }
 }
 .center-container {
-	margin-top: -75px;
 	display: flex;
     align-items: center;
 	width: 100vw;
