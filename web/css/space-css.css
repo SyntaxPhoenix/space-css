@@ -1212,7 +1212,7 @@ fieldset[disabled] .btn {
     font-size: 16px;
 }
 .form-hidden {
-    display: none;
+    display: none !important;
 }
 input[type="text"].form-control,
 input[type="password"].form-control,
