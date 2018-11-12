@@ -64,16 +64,16 @@ body {
 }
 @font-face {
     font-family: 'spacecss';
-    src:  url('../fonts/spacecss.eot?azbrwf');
-    src:  url('../fonts/spacecss.eot?azbrwf#iefix') format('embedded-opentype'),
-      url('../fonts/spacecss.ttf?azbrwf') format('truetype'),
-      url('../fonts/spacecss.woff?azbrwf') format('woff'),
-      url('../fonts/spacecss.svg?azbrwf#spacecss') format('svg');
+    src:  url('../fonts/spacecss.eot?bv3tp1');
+    src:  url('../fonts/spacecss.eot?bv3tp1#iefix') format('embedded-opentype'),
+      url('../fonts/spacecss.ttf?bv3tp1') format('truetype'),
+      url('../fonts/spacecss.woff?bv3tp1') format('woff'),
+      url('../fonts/spacecss.svg?bv3tp1#spacecss') format('svg');
     font-weight: normal;
     font-style: normal;
-  }
+}
   
-  [class^="icon-"], [class*=" icon-"] {
+[class^="sc-"], [class*=" sc-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'spacecss' !important;
     speak: none;
@@ -86,125 +86,138 @@ body {
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
+}
   
-  .icon-arrow-down:before {
+.sc-rocket:before {
+    content: "\e901";
+}
+.sc-caret:before {
+    content: "\e928";
+}
+.sc-line-chart:before {
+    content: "\e929";
+}
+.sc-times:before {
+    content: "\e92a";
+}
+.sc-arrow-down:before {
     content: "\e900";
-  }
-  .icon-arrow-left:before {
+}
+.sc-arrow-left:before {
     content: "\e902";
-  }
-  .icon-arrow-right:before {
+}
+.sc-arrow-right:before {
     content: "\e903";
-  }
-  .icon-arrow-up:before {
+}
+.sc-arrow-up:before {
     content: "\e904";
-  }
-  .icon-bar-chart:before {
+}
+.sc-bar-chart:before {
     content: "\e905";
-  }
-  .icon-battery-full:before {
+}
+.sc-battery-full:before {
     content: "\e906";
-  }
-  .icon-battery-half:before {
+}
+.sc-battery-half:before {
     content: "\e907";
-  }
-  .icon-battery-quater:before {
+}
+.sc-battery-quater:before {
     content: "\e908";
-  }
-  .icon-bell:before {
+}
+.sc-bell:before {
     content: "\e909";
-  }
-  .icon-book:before {
+}
+.sc-book:before {
     content: "\e90a";
-  }
-  .icon-bookmark:before {
+}
+.sc-bookmark:before {
     content: "\e90b";
-  }
-  .icon-boxes-four:before {
+}
+.sc-boxes-four:before {
     content: "\e90c";
-  }
-  .icon-boxes-twelve:before {
+}
+.sc-boxes-twelve:before {
     content: "\e90d";
-  }
-  .icon-camera:before {
+}
+.sc-camera:before {
     content: "\e90e";
-  }
-  .icon-cloud:before {
+}
+.sc-cloud:before {
     content: "\e90f";
-  }
-  .icon-cog:before {
+}
+.sc-cog:before {
     content: "\e910";
-  }
-  .icon-comment:before {
+}
+.sc-comment:before {
     content: "\e911";
-  }
-  .icon-flag:before {
+}
+.sc-flag:before {
     content: "\e912";
-  }
-  .icon-heart-empty:before {
+}
+.sc-heart-empty:before {
     content: "\e913";
-  }
-  .icon-heart-full:before {
+}
+.sc-heart-full:before {
     content: "\e914";
-  }
-  .icon-home:before {
+}
+.sc-home:before {
     content: "\e915";
-  }
-  .icon-lock:before {
+}
+.sc-lock:before {
     content: "\e916";
-  }
-  .icon-mail:before {
+}
+.sc-mail:before {
     content: "\e917";
-  }
-  .icon-menu:before {
+}
+.sc-menu:before {
     content: "\e918";
-  }
-  .icon-minus:before {
+}
+.sc-minus:before {
     content: "\e919";
-  }
-  .icon-off:before {
+}
+.sc-off:before {
     content: "\e91a";
-  }
-  .icon-okey:before {
+}
+.sc-check:before {
     content: "\e91b";
-  }
-  .icon-remove:before {
+}
+.sc-remove:before {
     content: "\e91c";
-  }
-  .icon-picture:before {
+}
+.sc-picture-empty:before {
     content: "\e91d";
-  }
-  .icon-refresh:before {
+}
+.sc-refresh:before {
     content: "\e91e";
-  }
-  .icon-repeat:before {
+}
+.sc-repeat:before {
     content: "\e91f";
-  }
-  .icon-search:before {
+}
+.sc-search:before {
     content: "\e920";
-  }
-  .icon-signal:before {
+}
+.sc-signal:before {
     content: "\e921";
-  }
-  .icon-thumb-empty-down:before {
+}
+.sc-thumb-empty-down:before {
     content: "\e922";
-  }
-  .icon-thumb-empty-up:before {
+}
+.sc-thumb-empty-up:before {
     content: "\e923";
-  }
-  .icon-thumb-full-down:before {
+}
+.sc-thumb-full-down:before {
     content: "\e924";
-  }
-  .icon-thumb-full-up:before {
+}
+.sc-thumb-full-up:before {
     content: "\e925";
-  }
-  .icon-trash:before {
+}
+.sc-trash:before {
     content: "\e926";
-  }
-  .icon-user:before {
+}
+.sc-user:before {
     content: "\e927";
-  }
+}
+  
 /* Grid-System */
 .row {
     margin-left: -12px;
@@ -1586,6 +1599,9 @@ table.table {
     background-color: #e1e1e1;
 }
 @media (max-width: 767px) {
+    .navbar-hidden {
+        position: static !important;
+    }
     .navbar-toggle {
         display: block;
     }
@@ -1603,7 +1619,7 @@ table.table {
     }
     .navbar-toggled {
         height: 100% !important;
-        z-index: 7000;
+        z-index: 8000 !important;
     }
     .navbar-brand {
         display: none;

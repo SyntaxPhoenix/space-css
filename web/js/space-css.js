@@ -86,22 +86,46 @@ function untoggleModal(element)
     element.classList.remove('modal-show');
 }
 
+function hideAllNav(element) {
+    var navbars = document.getElementsByClassName("navbar");
+    for (i = 0; i < navbars.length; i++) {
+        if(navbars[i] != element) {
+            navbars[i].classList.add('navbar-hidden');
+        }
+    }
+}
+
+function unhideAllNav() {
+    var navbars = document.getElementsByClassName("navbar");
+    for (i = 0; i < navbars.length; i++) {
+        navbars[i].classList.remove('navbar-hidden');
+    }
+}
+
 function toggleNav(element) 
 {
     navbar = element.dataset.target.replace('#', '');
     document.getElementById(navbar).classList.add('navbar-toggled');
-    element.innerHTML = '<span class="icon-remove"></span>'
+    for(i = 0; i < element.children.length; i++) {
+        element.children[i].classList.add('sc-times');
+        element.children[i].classList.remove('sc-menu');
+    }
     element.dataset.toggle = 'toggled';
     toggledNav = element;
+    hideAllNav(element.parentElement.parentElement);
 }
 
 function untoggleNav(element) 
 {
     navbar = element.dataset.target.replace('#', '');
     document.getElementById(navbar).classList.remove('navbar-toggled');
-    element.innerHTML = '<span class="icon-menu"></span>'
+    for(i = 0; i < element.children.length; i++) {
+        element.children[i].classList.add('sc-menu');
+        element.children[i].classList.remove('sc-times');
+    }
     element.dataset.toggle = 'toggle';
     toggledNav = '';
+    unhideAllNav();
 }
 
 function toggleDropdown(dropdown) 

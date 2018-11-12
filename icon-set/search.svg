@@ -1,45 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
-  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
-   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description rdf:about=""/>
-   </rdf:RDF>
-</x:xmpmeta>
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                           
-<?xpacket end="w"?></metadata>
-<defs>
-    <style>
-      .cls-1 {
-        fill: none;
-        stroke: #000;
-        stroke-width: 67.45px;
-      }
-
-      .cls-2 {
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <circle class="cls-1" cx="437" cy="362" r="235"/>
-  <path id="Rechteck_1" data-name="Rechteck 1" class="cls-2" d="M531.245,542l16.935-14.042a25,25,0,0,1,35.2,3.287L840.619,841.468a25,25,0,0,1-3.287,35.2L820.4,890.712a25,25,0,0,1-35.2-3.287L527.958,577.2A25,25,0,0,1,531.245,542Z"/>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="1024.000000pt" height="1024.000000pt" viewBox="0 0 1024.000000 1024.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M4045 8953 c-150 -20 -386 -82 -531 -138 -709 -278 -1238 -875 -1424
+-1609 -52 -204 -70 -357 -70 -586 0 -229 18 -382 70 -586 236 -928 1023 -1627
+1968 -1748 162 -21 462 -21 624 0 147 19 388 79 513 127 84 33 91 34 105 18 8
+-9 591 -711 1294 -1559 1429 -1723 1311 -1592 1446 -1592 86 0 126 20 263 134
+129 107 157 153 157 255 0 42 -7 81 -19 106 -10 22 -567 702 -1237 1510 -671
+809 -1234 1489 -1252 1511 l-33 42 118 118 c303 305 508 667 613 1078 52 204
+70 357 70 586 0 229 -18 382 -70 586 -236 928 -1023 1627 -1968 1748 -156 20
+-484 20 -637 -1z m535 -677 c386 -52 717 -220 991 -503 444 -460 583 -1110
+368 -1720 -159 -450 -552 -843 -1002 -1002 -381 -134 -753 -134 -1134 0 -387
+137 -737 449 -928 828 -314 626 -196 1387 294 1894 285 295 622 459 1046 510
+75 9 270 5 365 -7z"/>
+</g>
 </svg>
