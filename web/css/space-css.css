@@ -62,6 +62,18 @@ body {
 .body-dark {
     background-color: var(--lightdark-color);
 }
+.sc-2x {
+    font-size: 25px;
+}
+.sc-3x {
+    font-size: 32px;
+}
+.sc-4x {
+    font-size: 39px;
+}
+.sc-5x {
+    font-size: 46px;
+}
 @font-face {
     font-family: 'spacecss';
     src:  url('../fonts/spacecss.eot?bv3tp1');
@@ -72,7 +84,6 @@ body {
     font-weight: normal;
     font-style: normal;
 }
-  
 [class^="sc-"], [class*=" sc-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'spacecss' !important;
@@ -87,7 +98,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-  
 .sc-rocket:before {
     content: "\e901";
 }
